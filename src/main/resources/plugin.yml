@@ -1,0 +1,25 @@
+name: UntiEco
+main: com.untistore.economy.Main
+version: 1.0
+api-version: 1.21
+author: Jacksmf
+description: UntiEco is a economy plugin that is easy to use and simple to setup.
+commands:
+  economy:
+    description: Check your balance
+    usage: /<command>
+    aliases: [ eco, money ]
+    permission: economy.admin
+  balance:
+    description: Check your balance
+    usage: /<command>
+    aliases: [ bal ]
+
+permissions:
+  economy.admin:
+      description: Allows access to all UntiEco commands
+      default: op
+  economy.balance.*:
+    description: Allows access to all UntiEco balance commands
+    default: op
+    children: [economy.balance, economy.balance.others]
